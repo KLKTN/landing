@@ -53,13 +53,14 @@
 
     .main-wrap {
       display: flex;
+      flex-direction: column;
+
       overflow: hidden;
     }
 
     .left-col,
     .right-col {
-      width: 50vw;
-      height: 100vh;
+      width: 100vw;
       background: black;
       padding: 0 2vw;
 
@@ -69,12 +70,20 @@
       align-items: center;
     }
 
+    .left-col {
+      height: 66.67vh;
+    }
+    .right-col {
+      height: 33.33vh;
+    }
+
     /* .left-col>*,
     .right-col>* {
     } */
 
     .logo-main {
       width: 100%;
+      padding: 0 20vw;
     }
   </style>
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -84,17 +93,17 @@
 <body>
   <div class="main-wrap">
     <div class="left-col">
-      <img class="logo-main" alt="KLKTN logo" src="klktn-black-logo.png">
+      <img class="logo-main" alt="KLKTN logo" src="klktn-logo-black-large.png">
     </div>
     <div class="right-col">
-      <div style="width: 33vw;">
+      <!-- <div style="width: 33vw;">
         <h1>HELLO</h1>
         <p>
           cool text goes here!<br />
           ipsum ipsum ipsum<br />
           lorem lorem lorem<br />
         </p>
-      </div>
+      </div> -->
 
       <!-- Begin Mailchimp Signup Form -->
       <!-- <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css"> -->
@@ -138,18 +147,20 @@
         <form action="https://klktn.us1.list-manage.com/subscribe/post?u=284ba16bf7e16883f129c1744&amp;id=6680334b47"
           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
           target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-            <label for="mce-EMAIL">BE THE FIRST TO KNOW</label>
-            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your best email"
-              required>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true">
-              <input type="text" name="b_284ba16bf7e16883f129c1744_6680334b47" tabindex="-1" value="">
+          <center>
+            <div id="mc_embed_signup_scroll">
+              <label for="mce-EMAIL">BE THE FIRST TO KNOW</label>
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="your best email"
+                required>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                <input type="text" name="b_284ba16bf7e16883f129c1744_6680334b47" tabindex="-1" value="">
+              </div>
+              <div class="clear">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </div>
             </div>
-            <div class="clear">
-              <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-            </div>
-          </div>
+          </center>
         </form>
       </div>
       <!--End mc_embed_signup-->
